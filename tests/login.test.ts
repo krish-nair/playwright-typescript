@@ -1,9 +1,8 @@
-import {chromium, test} from "@playwright/test"
+import {chromium, expect, test} from "@playwright/test"
 
 test("Login test demo", async () => {
     const browser = await chromium.launch({
-        headless: false,
-        slowMo: 1000
+        slowMo: 2
     });
     const context = await browser.newContext();
     const page = await context.newPage();
@@ -16,11 +15,20 @@ test("Login test demo", async () => {
     await page.fill("input[name='email']", "admin@xyz.com");
     await page.fill("input[name='password']", "123456!");
     await page.click("input[value='Login']");
+    await page.locator("div.list-group a").last().click();
 
-    const newContext = await browser.newContext();
-    const newPage = await newContext.newPage();
+    await page.waitForTimeout(3000);
 
-    await newPage.goto("https://ecommerce-playground.lambdatest.io/index.php?route=account/account");
+    await expect(page).toHaveTitle('Account Logout');
+
+    // to create new context
+
+    // const newContext = await browser.newContext();
+    // const newPage = await newContext.newPage();
+
+    // await newPage.goto("https://ecommerce-playground.lambdatest.io/index.php?route=account/account");
+
+
 
 
 })
