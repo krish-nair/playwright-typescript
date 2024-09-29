@@ -28,7 +28,7 @@
       [
         "html",
         {
-          "open": "always"
+          "open": "never"
         }
       ]
     ],
@@ -48,7 +48,7 @@
         "testDir": "D:/MyProjects/playwright-typescript/playwright-typescript",
         "testIgnore": [],
         "testMatch": [
-          "tests/basicInteractions.test.ts"
+          "tests/alerts.test.ts"
         ],
         "timeout": 30000
       }
@@ -61,13 +61,13 @@
   },
   "suites": [
     {
-      "title": "tests\\basicInteractions.test.ts",
-      "file": "tests/basicInteractions.test.ts",
+      "title": "tests\\alerts.test.ts",
+      "file": "tests/alerts.test.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "verify text",
+          "title": "verify JavaScript alerts",
           "ok": true,
           "tags": [],
           "tests": [
@@ -90,20 +90,20 @@
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-09-29T02:32:47.390Z",
+                  "startTime": "2024-09-29T05:59:37.116Z",
                   "attachments": []
                 }
               ],
               "status": "skipped"
             }
           ],
-          "id": "e8550347d925177e1da7-60d67f29fb52307355a4",
-          "file": "tests/basicInteractions.test.ts",
-          "line": 3,
+          "id": "addb81fc64a6c6200bbb-0373f54400e14566cad1",
+          "file": "tests/alerts.test.ts",
+          "line": 4,
           "column": 6
         },
         {
-          "title": "verify addition",
+          "title": "prompt alert",
           "ok": true,
           "tags": [],
           "tests": [
@@ -117,25 +117,21 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 6799,
+                  "duration": 9156,
                   "errors": [],
-                  "stdout": [
-                    {
-                      "text": "Sum value = 653\n"
-                    }
-                  ],
+                  "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-09-29T02:32:47.394Z",
+                  "startTime": "2024-09-29T05:59:37.118Z",
                   "attachments": []
                 }
               ],
               "status": "expected"
             }
           ],
-          "id": "e8550347d925177e1da7-ce810397af8140dbef8e",
-          "file": "tests/basicInteractions.test.ts",
-          "line": 14,
+          "id": "addb81fc64a6c6200bbb-15bbeb57f7745f2a6315",
+          "file": "tests/alerts.test.ts",
+          "line": 18,
           "column": 5
         }
       ]
@@ -143,8 +139,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-09-29T02:32:45.637Z",
-    "duration": 10371.463,
+    "startTime": "2024-09-29T05:59:35.853Z",
+    "duration": 11982.416,
     "expected": 1,
     "skipped": 1,
     "unexpected": 0,

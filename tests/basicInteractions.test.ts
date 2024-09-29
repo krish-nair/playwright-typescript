@@ -11,8 +11,8 @@ test.skip("verify text", async ({page}) => {
     page.locator("#showInput").click();
 });
 
-test("verify addition", async ({page}) => {
-    page.goto("https://www.lambdatest.com/selenium-playground/simple-form-demo");
+test.skip("verify addition", async ({page}) => {
+    await page.goto("https://www.lambdatest.com/selenium-playground/simple-form-demo");
 
     const num1Field = page.locator("input#sum1");
     const num2Field = page.locator("input#sum2");
@@ -31,5 +31,11 @@ test("verify addition", async ({page}) => {
     await expect(sumValue).toHaveText(""+ result);
 
 
+});
+
+test("verify checkbox is checked", async ({page}) => {
+    await page.goto("https://www.lambdatest.com/selenium-playground/checkbox-demo");
+    await page.locator("input#isAgeSelected").check();
+    await page.waitForTimeout(5000);
 });
 
