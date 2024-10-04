@@ -48,7 +48,7 @@
         "testDir": "D:/MyProjects/playwright-typescript/playwright-typescript",
         "testIgnore": [],
         "testMatch": [
-          "tests/calendar.test.ts"
+          "tests/pomTests/loginpage.test.ts"
         ],
         "timeout": 30000
       }
@@ -61,86 +61,14 @@
   },
   "suites": [
     {
-      "title": "tests\\calendar.test.ts",
-      "file": "tests/calendar.test.ts",
+      "title": "tests\\pomTests\\loginpage.test.ts",
+      "file": "tests/pomTests/loginpage.test.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "Interaction with calendar",
+          "title": "Login to sauce demo",
           "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [
-                {
-                  "type": "skip"
-                }
-              ],
-              "expectedStatus": "skipped",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "status": "skipped",
-                  "duration": 0,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-10-03T09:59:12.575Z",
-                  "attachments": []
-                }
-              ],
-              "status": "skipped"
-            }
-          ],
-          "id": "68c95afee124c9066c67-70a6ff972e87574d5e82",
-          "file": "tests/calendar.test.ts",
-          "line": 4,
-          "column": 6
-        },
-        {
-          "title": "Interact with calendar using moment package",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [
-                {
-                  "type": "skip"
-                }
-              ],
-              "expectedStatus": "skipped",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "status": "skipped",
-                  "duration": 0,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-10-03T09:59:12.578Z",
-                  "attachments": []
-                }
-              ],
-              "status": "skipped"
-            }
-          ],
-          "id": "68c95afee124c9066c67-9a89a1590cad23ee8d74",
-          "file": "tests/calendar.test.ts",
-          "line": 14,
-          "column": 6
-        },
-        {
-          "title": "Calendar function",
-          "ok": false,
           "tags": [],
           "tests": [
             {
@@ -152,57 +80,26 @@
               "results": [
                 {
                   "workerIndex": 0,
-                  "status": "failed",
-                  "duration": 10751,
-                  "error": {
-                    "message": "Error: page.click: Unexpected token \"day(\" while parsing selector \"div.datepicker-days table.table-condensed tbody tr td.day(\"3\")\"\nCall log:\n  \u001b[2m- waiting for div.datepicker-days table.table-condensed tbody tr td.day(\"3\")\u001b[22m\n",
-                    "stack": "Error: page.click: Unexpected token \"day(\" while parsing selector \"div.datepicker-days table.table-condensed tbody tr td.day(\"3\")\"\nCall log:\n  \u001b[2m- waiting for div.datepicker-days table.table-condensed tbody tr td.day(\"3\")\u001b[22m\n\n    at selectDate (D:\\MyProjects\\playwright-typescript\\playwright-typescript\\tests\\calendar.test.ts:84:16)\n    at D:\\MyProjects\\playwright-typescript\\playwright-typescript\\tests\\calendar.test.ts:53:5",
-                    "location": {
-                      "file": "D:\\MyProjects\\playwright-typescript\\playwright-typescript\\tests\\calendar.test.ts",
-                      "column": 16,
-                      "line": 84
-                    },
-                    "snippet": "\u001b[0m \u001b[90m 82 |\u001b[39m     \u001b[90m// Click on the desired day\u001b[39m\n \u001b[90m 83 |\u001b[39m     \u001b[36mconst\u001b[39m daySelector \u001b[33m=\u001b[39m \u001b[32m`div.datepicker-days table.table-condensed tbody tr td.day(\"${targetDay}\")`\u001b[39m\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 84 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mclick(daySelector)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 85 |\u001b[39m }\n \u001b[90m 86 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mpause()\u001b[33m;\u001b[39m\n \u001b[90m 87 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m"
-                  },
-                  "errors": [
+                  "status": "passed",
+                  "duration": 11599,
+                  "errors": [],
+                  "stdout": [
                     {
-                      "location": {
-                        "file": "D:\\MyProjects\\playwright-typescript\\playwright-typescript\\tests\\calendar.test.ts",
-                        "column": 16,
-                        "line": 84
-                      },
-                      "message": "Error: page.click: Unexpected token \"day(\" while parsing selector \"div.datepicker-days table.table-condensed tbody tr td.day(\"3\")\"\nCall log:\n  \u001b[2m- waiting for div.datepicker-days table.table-condensed tbody tr td.day(\"3\")\u001b[22m\n\n\n\u001b[0m \u001b[90m 82 |\u001b[39m     \u001b[90m// Click on the desired day\u001b[39m\n \u001b[90m 83 |\u001b[39m     \u001b[36mconst\u001b[39m daySelector \u001b[33m=\u001b[39m \u001b[32m`div.datepicker-days table.table-condensed tbody tr td.day(\"${targetDay}\")`\u001b[39m\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 84 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mclick(daySelector)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 85 |\u001b[39m }\n \u001b[90m 86 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mpause()\u001b[33m;\u001b[39m\n \u001b[90m 87 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\n\u001b[2m    at selectDate (D:\\MyProjects\\playwright-typescript\\playwright-typescript\\tests\\calendar.test.ts:84:16)\u001b[22m\n\u001b[2m    at D:\\MyProjects\\playwright-typescript\\playwright-typescript\\tests\\calendar.test.ts:53:5\u001b[22m"
+                      "text": "Products\n"
                     }
                   ],
-                  "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-10-03T09:59:12.579Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "D:\\MyProjects\\playwright-typescript\\playwright-typescript\\test-results\\tests-calendar-Calendar-function\\test-failed-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "D:\\MyProjects\\playwright-typescript\\playwright-typescript\\test-results\\tests-calendar-Calendar-function\\video.webm"
-                    }
-                  ],
-                  "errorLocation": {
-                    "file": "D:\\MyProjects\\playwright-typescript\\playwright-typescript\\tests\\calendar.test.ts",
-                    "column": 16,
-                    "line": 84
-                  }
+                  "startTime": "2024-10-04T10:29:13.079Z",
+                  "attachments": []
                 }
               ],
-              "status": "unexpected"
+              "status": "expected"
             }
           ],
-          "id": "68c95afee124c9066c67-e8f3284a5c718ca0f14f",
-          "file": "tests/calendar.test.ts",
-          "line": 46,
+          "id": "0b7df997145dab55969e-c8c94a6c79cf9d38329f",
+          "file": "tests/pomTests/loginpage.test.ts",
+          "line": 5,
           "column": 5
         }
       ]
@@ -210,11 +107,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-10-03T09:59:11.014Z",
-    "duration": 14189.455,
-    "expected": 0,
-    "skipped": 2,
-    "unexpected": 1,
+    "startTime": "2024-10-04T10:29:11.488Z",
+    "duration": 14717.191,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 0,
     "flaky": 0
   }
 }
