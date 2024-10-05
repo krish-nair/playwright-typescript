@@ -1,19 +1,42 @@
-import { expect, test } from "@playwright/test";
-import LoginPage from "../../pages/login.page";
-import ProductsPage from "../../pages/products.page";
+import {test, expect} from "../../config/fixtures";
 
-test("Login to sauce demo", async ({page}) => {
-    const loginPage = new LoginPage(page);
+test("Verify that user is logged in", async ({baseTest}) => {
+    
+    await baseTest.loginPage.login("standard_user", "secret_sauce");
+    console.log(await baseTest.loginPage.getPageHeading())
 
-    await loginPage.navigateTo();
-    await loginPage.login("standard_user", "secret_sauce");
-
-    console.log(await loginPage.getPageHeading())
-
-    expect.soft(await loginPage.getPageHeading()).toEqual("Products");
-
-    const productPage = new ProductsPage(page);
-
-    await productPage.selectAProduct("Test.allTheThings() T-Shirt (Red)");
-    await page.waitForTimeout(5000);
+    expect.soft(await baseTest.loginPage.getPageHeading()).toEqual("Products");
+    
 });
+
+test("Add a product to cart", async ({baseTest}) => {
+
+    await baseTest.loginPage.login("standard_user", "secret_sauce");
+
+    await baseTest.productPage.selectAProduct("Test.allTheThings() T-Shirt (Red)");
+
+    await baseTest.singleProductPage.addProductToCart();
+
+    const buttonText = await baseTest.singleProductPage.getAddToCartButtonText();
+
+    console.log(buttonText);
+
+    expect.soft(buttonText).toEqual("Remove");
+
+    // await baseTest.page.pause();
+
+});
+
+test.only("Navigate to cart", async ({baseTest}) => {
+    await baseTest.loginPage.login("standard_user", "secret_sauce");
+
+    await baseTest.productPage.selectAProduct("Test.allTheThings() T-Shirt (Red)");
+
+    await baseTest.singleProductPage.addProductToCart();
+
+    await baseTest.cartPage.clickOnCartItem();
+
+    await baseTest.page.waitForTimeout(5000);
+
+
+})

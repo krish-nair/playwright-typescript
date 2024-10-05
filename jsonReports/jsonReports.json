@@ -67,7 +67,7 @@
       "line": 0,
       "specs": [
         {
-          "title": "Login to sauce demo",
+          "title": "Navigate to cart",
           "ok": true,
           "tags": [],
           "tests": [
@@ -81,34 +81,30 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 11599,
+                  "duration": 12285,
                   "errors": [],
-                  "stdout": [
-                    {
-                      "text": "Products\n"
-                    }
-                  ],
+                  "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-10-04T10:29:13.079Z",
+                  "startTime": "2024-10-05T06:33:14.054Z",
                   "attachments": []
                 }
               ],
               "status": "expected"
             }
           ],
-          "id": "0b7df997145dab55969e-c8c94a6c79cf9d38329f",
+          "id": "0b7df997145dab55969e-5b0a80ce7b74617ee4f9",
           "file": "tests/pomTests/loginpage.test.ts",
-          "line": 5,
-          "column": 5
+          "line": 30,
+          "column": 6
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-10-04T10:29:11.488Z",
-    "duration": 14717.191,
+    "startTime": "2024-10-05T06:33:12.653Z",
+    "duration": 14596.651,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,

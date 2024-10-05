@@ -1,13 +1,15 @@
-import { Page } from "@playwright/test";
+import { Locator, Page } from "@playwright/test";
 
 export default class ProductsPage{
     private url = "https://www.saucedemo.com/inventory.html";
+    private items: Locator = this.page.locator("div.inventory_item_label a div");
+    
     constructor(private page: Page){}
 
 
 
     async selectAProduct(item: string){
-        const products = await this.page.locator("div.inventory_item_label a div").all();
+        const products = await this.items.all();
 
         for(let i = 0; i < products.length; i++){
             const product = products[i];

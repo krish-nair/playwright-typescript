@@ -6,6 +6,7 @@ const config: PlaywrightTestConfig = {
     projects: [
         {
             use: {
+                baseURL: "https://www.saucedemo.com/",
                 channel: "chrome",
                 viewport: { width: 1800, height: 980 },
                 headless: false,

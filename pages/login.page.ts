@@ -1,10 +1,12 @@
-import { Page } from '@playwright/test';
+import { Locator, Page } from '@playwright/test';
 
 export default class LoginPage{
-    private url = "https://www.saucedemo.com/";
+    private username: Locator = this.page.locator("#user-name");
+    private password: Locator = this.page.locator("#password");
+    private loginButton: Locator = this.page.locator("#login-button");
 
-    constructor(public page: Page){
-    }
+    constructor(private page: Page){}
+
 
 
     async getPageHeading(): Promise<string> {
@@ -15,12 +17,12 @@ export default class LoginPage{
     
 
     async login(uname: string, pwd: string){
-        await this.page.locator("#user-name").fill(uname);
-        await this.page.fill("#password", pwd);
-        await this.page.click("#login-button");
+        await this.username.fill(uname);
+        await this.password.fill(pwd);
+        await this.loginButton.click();
     }
 
-    async navigateTo(){
-        await this.page.goto(this.url);
+    async navigateTo(url: string){
+        await this.page.goto(url);
     }
 }
