@@ -3,7 +3,7 @@
     "configFile": "D:\\MyProjects\\playwright-typescript\\playwright-typescript\\playwright.config.ts",
     "rootDir": "D:/MyProjects/playwright-typescript/playwright-typescript",
     "forbidOnly": false,
-    "fullyParallel": true,
+    "fullyParallel": false,
     "globalSetup": null,
     "globalTeardown": null,
     "globalTimeout": 0,
@@ -48,7 +48,7 @@
         "testDir": "D:/MyProjects/playwright-typescript/playwright-typescript",
         "testIgnore": [],
         "testMatch": [
-          "tests/calendar.test.ts"
+          "tests/pomTests/loginpage.test.ts"
         ],
         "timeout": 30000
       }
@@ -56,55 +56,68 @@
     "shard": null,
     "updateSnapshots": "missing",
     "version": "1.47.2",
-    "workers": 3,
+    "workers": 1,
     "webServer": null
   },
   "suites": [
     {
-      "title": "tests\\calendar.test.ts",
-      "file": "tests/calendar.test.ts",
+      "title": "tests\\pomTests\\loginpage.test.ts",
+      "file": "tests/pomTests/loginpage.test.ts",
       "column": 0,
       "line": 0,
-      "specs": [
+      "specs": [],
+      "suites": [
         {
-          "title": "register page chain locator demo",
-          "ok": true,
-          "tags": [],
-          "tests": [
+          "title": "e2e test demo",
+          "file": "tests/pomTests/loginpage.test.ts",
+          "line": 5,
+          "column": 6,
+          "specs": [
             {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
+              "title": "Navigate to cart and verify product is added",
+              "ok": true,
+              "tags": [],
+              "tests": [
                 {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 21055,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-10-06T02:32:36.215Z",
-                  "attachments": []
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "status": "passed",
+                      "duration": 14132,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "true\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2024-10-06T09:43:38.033Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
                 }
               ],
-              "status": "expected"
+              "id": "0b7df997145dab55969e-326ea6d8544e851775ff",
+              "file": "tests/pomTests/loginpage.test.ts",
+              "line": 33,
+              "column": 10
             }
-          ],
-          "id": "68c95afee124c9066c67-8876bdd4ddcf13173eac",
-          "file": "tests/calendar.test.ts",
-          "line": 89,
-          "column": 6
+          ]
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-10-06T02:32:34.587Z",
-    "duration": 25843.152000000002,
+    "startTime": "2024-10-06T09:43:36.293Z",
+    "duration": 19317.588,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,

@@ -3,6 +3,7 @@ import LoginPage from './login.page';
 import ProductsPage from './products.page';
 import SingleProductPage from './singleProduct.page';
 import CartPage from './cart.page';
+import CheckoutPage from './checkout.page';
 
 // Define the BaseTest class to encapsulate page interactions
 export default class BaseTest {
@@ -12,6 +13,7 @@ export default class BaseTest {
     public readonly productPage: ProductsPage; // Instance for product listings
     public readonly singleProductPage: SingleProductPage; // Instance for single product details
     public readonly cartPage: CartPage; // Instance for shopping cart interactions
+    public readonly checkoutPage: CheckoutPage;
 
     constructor(page: Page) {
         this.page = page; // Assign the current page
@@ -19,5 +21,6 @@ export default class BaseTest {
         this.productPage = new ProductsPage(page); // Initialize products page object
         this.singleProductPage = new SingleProductPage(page); // Initialize single product page object
         this.cartPage = new CartPage(page); // Initialize cart page object
+        this.checkoutPage = new CheckoutPage(page);
     }
 }

@@ -2,14 +2,14 @@ import { PlaywrightTestConfig } from '@playwright/test';
 import { channel } from 'diagnostics_channel';
 
 const config: PlaywrightTestConfig = {
-    testMatch: ["tests/calendar.test.ts"],
+    testMatch: ["tests/pomTests/loginpage.test.ts"],
     projects: [
         {
             use: {
                 baseURL: "https://www.saucedemo.com/",
                 channel: "chrome",
                 viewport: { width: 1800, height: 980 },
-                headless: true,
+                headless: false,
                 screenshot: "only-on-failure",
                 video: "retain-on-failure",
             },

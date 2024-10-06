@@ -1,3 +1,4 @@
+import exp from "constants";
 import {test, expect} from "../../config/fixtures";
 import * as data from "../../test-data/loginData.json";
 
@@ -29,7 +30,7 @@ test.describe("e2e test demo", async () => {
     
     });
     
-    test("Navigate to cart", async ({baseTest}) => {
+    test.only("Navigate to cart and verify product is added", async ({baseTest}) => {
         await baseTest.loginPage.login(data.username, data.password);
     
         await baseTest.productPage.selectAProduct(data.product);
@@ -37,10 +38,17 @@ test.describe("e2e test demo", async () => {
         await baseTest.singleProductPage.addProductToCart();
     
         await baseTest.singleProductPage.clickOnCartItem();
-    
-        await baseTest.page.waitForTimeout(5000);
-    
-    
+
+        console.log(await baseTest.cartPage.isProductAdded());
+        
+        expect.soft(await baseTest.cartPage.isProductAdded()).toBeTruthy();
+
+        await baseTest.cartPage.clickChekoutButton();
+
+        expect(await baseTest.checkoutPage.getCheckoutPageHeading()).toEqual("Checkout: Your Information");
+        
+        await baseTest.page.pause();
+
     });
 });
 
