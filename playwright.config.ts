@@ -9,7 +9,7 @@ const config: PlaywrightTestConfig = {
                 baseURL: "https://www.saucedemo.com/",
                 channel: "chrome",
                 viewport: { width: 1800, height: 980 },
-                headless: false,
+                headless: true,
                 screenshot: "only-on-failure",
                 video: "retain-on-failure",
             },
@@ -25,7 +25,7 @@ const config: PlaywrightTestConfig = {
         //     slowMo: 3000
         // }
     // },
-    fullyParallel: true,
+    fullyParallel: false,
     retries: 0,
     reporter: [["dot"], ["json", {
         outputFile: "jsonReports/jsonReports.json"
