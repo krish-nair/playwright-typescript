@@ -28,7 +28,4 @@ test("Login test demo", async () => {
 
     // await newPage.goto("https://ecommerce-playground.lambdatest.io/index.php?route=account/account");
 
-
-
-
-})
+});

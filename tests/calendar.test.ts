@@ -85,3 +85,12 @@ test("Calendar function", async ({page}) => {
 }
     await page.pause();
 });
+
+test.only("register page chain locator demo", async ({page}) => {
+    await page.goto("https://ecommerce-playground.lambdatest.io/index.php?route=account/register");
+
+    await page.locator("form >> text='I have read and agree to the '").check();
+
+
+    await page.pause();
+});

@@ -2,7 +2,7 @@ import { PlaywrightTestConfig } from '@playwright/test';
 import { channel } from 'diagnostics_channel';
 
 const config: PlaywrightTestConfig = {
-    testMatch: ["tests/pomTests/loginpage.test.ts"],
+    testMatch: ["tests/calendar.test.ts"],
     projects: [
         {
             use: {
@@ -25,6 +25,7 @@ const config: PlaywrightTestConfig = {
         //     slowMo: 3000
         // }
     // },
+    fullyParallel: true,
     retries: 0,
     reporter: [["dot"], ["json", {
         outputFile: "jsonReports/jsonReports.json"

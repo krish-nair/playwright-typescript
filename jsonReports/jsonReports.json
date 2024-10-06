@@ -3,7 +3,7 @@
     "configFile": "D:\\MyProjects\\playwright-typescript\\playwright-typescript\\playwright.config.ts",
     "rootDir": "D:/MyProjects/playwright-typescript/playwright-typescript",
     "forbidOnly": false,
-    "fullyParallel": false,
+    "fullyParallel": true,
     "globalSetup": null,
     "globalTeardown": null,
     "globalTimeout": 0,
@@ -48,7 +48,7 @@
         "testDir": "D:/MyProjects/playwright-typescript/playwright-typescript",
         "testIgnore": [],
         "testMatch": [
-          "tests/pomTests/loginpage.test.ts"
+          "tests/calendar.test.ts"
         ],
         "timeout": 30000
       }
@@ -56,18 +56,18 @@
     "shard": null,
     "updateSnapshots": "missing",
     "version": "1.47.2",
-    "workers": 1,
+    "workers": 3,
     "webServer": null
   },
   "suites": [
     {
-      "title": "tests\\pomTests\\loginpage.test.ts",
-      "file": "tests/pomTests/loginpage.test.ts",
+      "title": "tests\\calendar.test.ts",
+      "file": "tests/calendar.test.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "Navigate to cart",
+          "title": "register page chain locator demo",
           "ok": true,
           "tags": [],
           "tests": [
@@ -81,21 +81,21 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 12285,
+                  "duration": 21055,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-10-05T06:33:14.054Z",
+                  "startTime": "2024-10-06T02:32:36.215Z",
                   "attachments": []
                 }
               ],
               "status": "expected"
             }
           ],
-          "id": "0b7df997145dab55969e-5b0a80ce7b74617ee4f9",
-          "file": "tests/pomTests/loginpage.test.ts",
-          "line": 30,
+          "id": "68c95afee124c9066c67-8876bdd4ddcf13173eac",
+          "file": "tests/calendar.test.ts",
+          "line": 89,
           "column": 6
         }
       ]
@@ -103,8 +103,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-10-05T06:33:12.653Z",
-    "duration": 14596.651,
+    "startTime": "2024-10-06T02:32:34.587Z",
+    "duration": 25843.152000000002,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,
