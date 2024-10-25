@@ -70,11 +70,11 @@
         {
           "title": "e2e test demo",
           "file": "tests/pomTests/loginpage.test.ts",
-          "line": 5,
+          "line": 4,
           "column": 6,
           "specs": [
             {
-              "title": "Navigate to cart and verify product is added",
+              "title": "Add a product to cart",
               "ok": true,
               "tags": [],
               "tests": [
@@ -88,25 +88,25 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 14132,
+                      "duration": 7467,
                       "errors": [],
                       "stdout": [
                         {
-                          "text": "true\n"
+                          "text": "Remove\n"
                         }
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2024-10-06T09:43:38.033Z",
+                      "startTime": "2024-10-25T21:57:26.953Z",
                       "attachments": []
                     }
                   ],
                   "status": "expected"
                 }
               ],
-              "id": "0b7df997145dab55969e-326ea6d8544e851775ff",
+              "id": "0b7df997145dab55969e-50f15eb4c3f4ad70a597",
               "file": "tests/pomTests/loginpage.test.ts",
-              "line": 33,
+              "line": 14,
               "column": 10
             }
           ]
@@ -116,8 +116,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-10-06T09:43:36.293Z",
-    "duration": 19317.588,
+    "startTime": "2024-10-25T21:57:25.359Z",
+    "duration": 10606.851,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,

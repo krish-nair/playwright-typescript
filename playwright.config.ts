@@ -1,9 +1,16 @@
-import { PlaywrightTestConfig } from '@playwright/test';
+import { devices, PlaywrightTestConfig } from '@playwright/test';
 import { channel } from 'diagnostics_channel';
 
 const config: PlaywrightTestConfig = {
     testMatch: ["tests/pomTests/loginpage.test.ts"],
     projects: [
+        // {
+        //     name: 'Mobile Safari',
+        //     use: { 
+        //         ...devices['iPhone 12'],
+        //         baseURL: "https://www.saucedemo.com/",
+        //     },
+        //   },
         {
             use: {
                 baseURL: "https://www.saucedemo.com/",
@@ -14,7 +21,7 @@ const config: PlaywrightTestConfig = {
                 video: "retain-on-failure",
             },
 
-        }
+        },
     ],
     // use: {
     //     viewport: { width: 1600, height: 1200 },
